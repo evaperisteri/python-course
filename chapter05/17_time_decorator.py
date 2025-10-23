@@ -10,10 +10,10 @@ def timer_decorator(func):
     """
     def inner_function(*args, **kwargs):
         start_time = time.time()
-        result = func(*args, **kwargs)
+        result = func(*args, **kwargs) #execution
         end_time = time.time()
         print(f"{func.__name__} took {end_time - start_time} seconds to run")
-        return result
+        return result # optional
     return inner_function
 
 def sum_function(n):
