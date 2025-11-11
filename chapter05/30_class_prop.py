@@ -24,6 +24,15 @@ def main():
     print(p.name)
     p.name = "John"
     print(p.name)
+    del p.name
+    print(p.name)
+    p.friends = [] # Linter warning: "Instance attribute defined outside __init__"
+    p.friends.append("Chris")
+    p.friends.append("Ioannis")
+    print("friend list:")
+    for friend in p.friends:
+        print(f" - {friend}")
+
 
 if __name__ == "__main__":
     main()
